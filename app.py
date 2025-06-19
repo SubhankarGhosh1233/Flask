@@ -12,21 +12,21 @@ def welcome():
 
 @app.route('/success/<int:score>')
 def success(score):
-    return "The Person has passed and the marks is "+ str(score)
+    return "<html><body><h1>The resust is passed</h1></body></html>"
 
 @app.route('/fail/<int:score>')
 def fail(score):
     return "The Person has failed and the marks is "+ str(score)
 
 # Result checker
-@app.route('/result/<int:score>')
-def result(score):
+@app.route('/result/<int:marks>')
+def result(marks):
     result=""
-    if score<50:
+    if marks<50:
         result='fail'
     else:
-        result='pass'
-    return 
+        result='success'
+    return redirect(url_for(result,score=marks))
 
 
 if __name__=='__main__':
