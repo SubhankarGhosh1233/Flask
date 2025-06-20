@@ -1,6 +1,12 @@
 ### Integrating HTML With FLASK --Called jinja2 tech
 ### HTTP verb GET And POST
 ### use library-"request" to make submit working like give result
+##### jinja2 template engine
+'''
+{%...%} condictions,for loop
+{{    }} expressions to print output
+{#....#} thi is for comments
+'''
 from flask import Flask,redirect,url_for,render_template,request
 ### WSGI Application
 app=Flask(__name__)
@@ -11,13 +17,7 @@ def welcome():
 
 @app.route('/success/<int:score>')
 def success(score):
-   res=""
-   if score>=50:
-       res="PASS"
-   else:
-       res="FAIL"
-         
-   return render_template('result.html',result=res) 
+   return render_template('result.html',result=score) 
 
 @app.route('/fail/<int:score>')
 def fail(score):
