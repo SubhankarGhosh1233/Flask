@@ -43,11 +43,12 @@ def submit():
         data_science=float(request.form['datascience'])
         total_score=(science+maths+history+data_science)/4
     res=""
-    if total_score>=50:
-        res="success"
-    else:
-        res="fail"
-    return redirect(url_for(res,score=total_score))
+    return redirect(url_for('success',score=total_score))
+
+
+
+
+
 
 if __name__=='__main__':
     app.run(debug=True)
