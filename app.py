@@ -31,3 +31,4 @@ def result(marks):
 
 if __name__=='__main__':
     app.run(debug=True)
+    #return redirect(url_for('success',score=total_score))
