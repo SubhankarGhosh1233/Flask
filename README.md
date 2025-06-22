@@ -14,5 +14,5 @@ web templates system along with serten data source , this data source dynamicall
 @app.route('/success/<int:score>')
 def success(score):
     return "<html><body><h1>The resust is passed</h1></body></html>"  
-###### return "<html><body><h1>The resust is passed</h1></body></html>" hardcodeing the html is not a good idea
+   return "<html><body><h1>The resust is passed</h1></body></html>" hardcodeing the html is not a good idea
 create a html page and call it over here

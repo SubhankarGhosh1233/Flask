@@ -1,13 +1,18 @@
 <html>
-
-
+  
 <h2>Final Result</h2>
 <body>
-    {% if result>=50 %}
-    <h1>Your Result is Passed</h1>
-    {% else %}
-    <h1>Your Result is Failed</h1>
-    {% endif %}    
+<table border=8>
+ {% for key,value in result.items() %} 
+    <tr>
+        {# this is the coment sections #}
+        <th>{{ key }}</th>
+        <th>{{ value }}</th>
+
+    </tr>
+  {% endfor %}
+</table>    
 </body>
 
 </html>
+
