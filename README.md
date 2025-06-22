@@ -14,5 +14,15 @@ web templates system along with serten data source , this data source dynamicall
 @app.route('/success/<int:score>')
 def success(score):
     return "<html><body><h1>The resust is passed</h1></body></html>"  
-   return "<html><body><h1>The resust is passed</h1></body></html>" hardcodeing the html is not a good idea
+   --- return "<html><body><h1>The resust is passed</h1></body></html>" hardcodeing the html is not a good idea
 create a html page and call it over here
+###### jinja2 templetes engine technique
+<head>
+ <link rel="stylesheet"  href="{{ url_for('static',filename='css/style.css') }}">---<link> this way adding external file,using an external "style.css" file
+</head>
+<head>
+ <link rel="stylesheet"  href="{{ url_for('static',filename='css/style.css') }}">
+<script>
+  alert("This page has been loaded")--- javascripts
+</script>
+</head>
